@@ -1,5 +1,7 @@
 class A:
     def Hello(self):
-        return  "Hel "
+        return  "Hello"
 
+b = A()
 
+print (b.Hello())
