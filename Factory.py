@@ -1,28 +1,27 @@
 class Delivery:
-    def __init__(self, Cargo, TypeDelivery):
-        self.__Cargo = Cargo
-        self.__TypeDelivery = TypeDelivery
 
-    def AirDelivery(self):
-        print('Air Delivery')
+    def Road(self, Cargo, typeDelivery):
+        return self._get_type_delivery(typeDelivery)
 
-    def SeaDelivery(self):
-        print('Sea Delivery')
-
-    def LandDelivery(self):
-        print('Land Delivery')
-
-    def Road(self):
-        if self.__Cargo == "Air cargo":
-            Delivery.AirDelivery()
-        elif self.__Cargo == 'Sea cargo':
-            Delivery.SeaDelivery()
-        elif self.__Cargo == 'Land cargo':
-            Delivery.LandDelivery()
+    def _get_type_delivery(self, typeDelivery):
+        if typeDelivery == 'Air':
+            return self._AirDelivery()
+        elif typeDelivery == 'Sea':
+            return self._SeaDelivery()
+        elif typeDelivery == 'Land':
+            return self._LandDelivery()
         else:
-            raise Warning('No delivery!!!')
+            ValueError(typeDelivery)
 
+    def _AirDelivery(self):
+        return 'Air Delivery'
 
-Delivery = Delivery('Land cargo')
+    def _SeaDelivery(self):
+        return 'Sea Delivery'
 
-Delivery.Road()
+    def _LandDelivery(self):
+        return 'Land Delivery'
+
+Delivery = Delivery()
+
+print(Delivery.Road('Cargo', 'Sea'))
