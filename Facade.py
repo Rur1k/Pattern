@@ -10,7 +10,6 @@ class Engine:
     def CreateEngine(self):
         print('Двигатель установлен')
 
-
 class Salon:
     def CreateSalon(self):
         print('Салон установлен')

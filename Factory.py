@@ -1,6 +1,6 @@
 class Transport:
     def CreateTransport(self):
-        raise NotImplementedError()
+        pass
 
 class AirTransport(Transport):
     def CreateTransport(self):
@@ -15,8 +15,8 @@ class LandTransport(Transport):
         return 'Create land transport'
 
 class Creator:
-    def create_transport(self, type_): #фабричный метод с парамметрами.
-        raise NotImplementedError()
+    def create_transport(self, type_):
+        pass
 
 class MyCreator(Creator):
     def create_transport(self, type_):
