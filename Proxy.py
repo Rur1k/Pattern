@@ -28,13 +28,11 @@ class Proxy(IMath):
     def __init__(self):
         self.math = None
 
-    # Быстрые операции - не требуют реального субъекта
     def add(self, x, y):
         return x + y
 
     def sub(self, x, y):
         return x - y
-    # Медленная операция - требует создания реального субъекта
     def mul(self, x, y):
         if not self.math:
             self.math = Math()
@@ -42,7 +40,7 @@ class Proxy(IMath):
 
     def div(self, x, y):
         if y == 0:
-            return float('inf') # Вернуть positive infinity
+            return float('inf')
         if not self.math:
             self.math = Math()
         return self.math.div(x, y)
