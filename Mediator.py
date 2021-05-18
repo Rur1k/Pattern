@@ -1,9 +1,9 @@
-class WindowBase(object):
+class WindowBase:
     def show(self):
-        raise NotImplementedError()
+        pass
 
     def hide(self):
-        raise NotImplementedError()
+        pass
 
 
 class MainWindow(WindowBase):
@@ -30,7 +30,7 @@ class HelpWindow(WindowBase):
         print('Hide HelpWindow')
 
 
-class WindowMediator(object):
+class WindowMediator:
     def __init__(self):
         self.windows = dict.fromkeys(['main', 'setting', 'help'])
 
