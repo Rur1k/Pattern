@@ -41,7 +41,7 @@ class Lamp(object):
 
     def light(self):
         state = self.next_state()
-        print state.get_color()
+        print(state.get_color())
 
 
 lamp = Lamp()

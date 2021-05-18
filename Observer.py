@@ -1,6 +1,4 @@
-# coding: utf-8
-
-class Subject(object):
+class Subject:
     """Субъект"""
 
     def __init__(self):
@@ -30,7 +28,7 @@ class Subject(object):
             observer.update(data)
 
 
-class ObserverBase(object):
+class ObserverBase:
     """Абстрактный наблюдатель"""
 
     def update(self, data):
@@ -44,8 +42,7 @@ class Observer(ObserverBase):
         self._name = name
 
     def update(self, data):
-        print
-        '%s: %s' % (self._name, data)
+        print('%s: %s' % (self._name, data))
 
 
 subject = Subject()
