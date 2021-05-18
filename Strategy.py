@@ -1,28 +1,26 @@
-class ImageDecoder(object):
+class ImageDecoder:
     @staticmethod
     def decode(filename):
-        raise NotImplementedError()
-
+        pass
 
 class PNGImageDecoder(ImageDecoder):
     @staticmethod
     def decode(filename):
-        print 'PNG decode'
-
+        print('PNG decode')
 
 class JPEGImageDecoder(ImageDecoder):
     @staticmethod
     def decode(filename):
-        print 'JPEG decode'
+        print('JPEG decode')
 
 
 class GIFImageDecoder(ImageDecoder):
     @staticmethod
     def decode(filename):
-        print 'GIF decode'
+        print('GIF decode')
 
 
-class Image(object):
+class Image:
     @classmethod
     def open(cls, filename):
         ext = filename.rsplit('.', 1)[-1]

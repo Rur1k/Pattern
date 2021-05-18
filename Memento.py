@@ -41,11 +41,11 @@ originator = Originator()
 caretaker = Caretaker()
 
 originator.set_state('on')
-print 'Originator state:', originator.get_state()  # Originator state: on
+print('Originator state:', originator.get_state())  # Originator state: on
 caretaker.set_memento(originator.save_state())
 
 originator.set_state('off')
-print 'Originator change state:', originator.get_state()  # Originator change state: off
+print('Originator change state:', originator.get_state())  # Originator change state: off
 
 originator.restore_state(caretaker.get_memento())
-print 'Originator restore state:', originator.get_state()  # Originator restore state: on
+print('Originator restore state:', originator.get_state())  # Originator restore state: on
