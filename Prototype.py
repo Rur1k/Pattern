@@ -1,6 +1,6 @@
 import copy
 
-class Prototype(object):
+class Prototype:
     def __init__(self):
         self._objects = {}
 

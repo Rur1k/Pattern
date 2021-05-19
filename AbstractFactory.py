@@ -34,6 +34,7 @@ class FactoryTwo(AbstractFactory):
     def ProducingCountry(self):
         return Country('Япония')
 
+
 def GetFactory(choise):
     if choise == 1:
         return FactoryOne()

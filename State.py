@@ -1,4 +1,4 @@
-class LampStateBase(object):
+class LampStateBase:
     """Состояние лампы"""
     def get_color(self):
         raise NotImplementedError()
@@ -19,7 +19,7 @@ class BlueLampState(LampStateBase):
         return 'Blue'
 
 
-class Lamp(object):
+class Lamp:
     def __init__(self):
         self._current_state = None
         self._states = self.get_states()
@@ -45,11 +45,8 @@ class Lamp(object):
 
 
 lamp = Lamp()
-[lamp.light() for i in range(3)]
-# Green
-# Red
-# Blue
-[lamp.light() for i in range(3)]
-# Green
-# Red
-# Blue
+for i in range(3):
+    lamp.light()
+
+for i in range(3):
+    lamp.light()

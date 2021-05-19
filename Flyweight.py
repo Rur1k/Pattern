@@ -18,7 +18,7 @@ class TreeBranch:
         print("Hang {} [{}] lamp on branch {} [{}]".format(lamp.color, id(lamp), self.branch_number, id(self)))
 
 
-class ChristmasTree(object):
+class ChristmasTree:
     def __init__(self):
         self.lamps_hung = 0
         self.branches = {}

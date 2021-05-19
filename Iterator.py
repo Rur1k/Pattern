@@ -1,37 +1,25 @@
-# coding: utf-8
-
 class IteratorBase(object):
-    """Базовый класс итератора"""
 
     def first(self):
-        """Возвращает первый элемент коллекции.
-        Если элемента не существует возбуждается исключение IndexError."""
-        raise NotImplementedError()
+        pass
 
     def last(self):
-        """Возвращает последний элемент коллекции.
-        Если элемента не существует возбуждается исключение IndexError."""
-        raise NotImplementedError()
+        pass
 
     def next(self):
-        """Возвращает следующий элемент коллекции"""
-        raise NotImplementedError()
+        pass
 
     def prev(self):
-        """Возвращает предыдущий элемент коллекции"""
-        raise NotImplementedError()
+        pass
 
     def current_item(self):
-        """Возвращает текущий элемент коллекции"""
-        raise NotImplementedError()
+        pass
 
     def is_done(self, index):
-        """Возвращает истину если элемент с указанным индексом существует, иначе ложь"""
-        raise NotImplementedError()
+        pass
 
     def get_item(self, index):
-        """Возвращает элемент коллекции с указанным индексом, иначе выбрасывает исключение IndexError"""
-        raise NotImplementedError()
+        pass
 
 
 class Iterator(IteratorBase):

@@ -1,4 +1,4 @@
-class HttpHandler(object):
+class HttpHandler:
     """Абстрактный класс обработчика"""
 
     def handle(self, code):
@@ -21,7 +21,7 @@ class Http500Handler(HttpHandler):
             return 'Ошибка сервера'
 
 
-class Client(object):
+class Client:
     def __init__(self):
         self._handlers = []
 

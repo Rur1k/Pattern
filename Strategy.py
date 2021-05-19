@@ -3,10 +3,12 @@ class ImageDecoder:
     def decode(filename):
         pass
 
+
 class PNGImageDecoder(ImageDecoder):
     @staticmethod
     def decode(filename):
         print('PNG decode')
+
 
 class JPEGImageDecoder(ImageDecoder):
     @staticmethod
@@ -20,7 +22,7 @@ class GIFImageDecoder(ImageDecoder):
         print('GIF decode')
 
 
-class Image:
+class Image(object):
     @classmethod
     def open(cls, filename):
         ext = filename.rsplit('.', 1)[-1]

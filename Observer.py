@@ -1,6 +1,4 @@
 class Subject:
-    """Субъект"""
-
     def __init__(self):
         self._data = None
         self._observers = set()
@@ -29,14 +27,11 @@ class Subject:
 
 
 class ObserverBase:
-    """Абстрактный наблюдатель"""
-
     def update(self, data):
-        raise NotImplementedError()
+        pass
 
 
 class Observer(ObserverBase):
-    """Наблюдатель"""
 
     def __init__(self, name):
         self._name = name

@@ -1,4 +1,4 @@
-class Memento(object):
+class Memento:
     """Хранитель"""
     def __init__(self, state):
         self._state = state
@@ -7,7 +7,7 @@ class Memento(object):
         return self._state
 
 
-class Caretaker(object):
+class Caretaker:
     """Опекун"""
     def __init__(self):
         self._memento = None
@@ -19,7 +19,7 @@ class Caretaker(object):
         self._memento = memento
 
 
-class Originator(object):
+class Originator:
     """Создатель"""
     def __init__(self):
         self._state = None
