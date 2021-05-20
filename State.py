@@ -1,7 +1,7 @@
 class LampStateBase:
     """Состояние лампы"""
     def get_color(self):
-        raise NotImplementedError()
+        pass
 
 
 class GreenLampState(LampStateBase):
@@ -48,5 +48,3 @@ lamp = Lamp()
 for i in range(3):
     lamp.light()
 
-for i in range(3):
-    lamp.light()

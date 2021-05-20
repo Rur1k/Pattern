@@ -22,7 +22,7 @@ class GIFImageDecoder(ImageDecoder):
         print('GIF decode')
 
 
-class Image(object):
+class Image:
     @classmethod
     def open(cls, filename):
         ext = filename.rsplit('.', 1)[-1]
