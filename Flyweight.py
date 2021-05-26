@@ -15,7 +15,7 @@ class TreeBranch:
         self.branch_number = branch_number
 
     def hang(self, lamp):
-        print("Hang {} [{}] lamp on branch {} [{}]".format(lamp.color, id(lamp), self.branch_number, id(self)))
+        print("Поверешно {} [{}] светильник на ветку {} [{}]".format(lamp.color, id(lamp), self.branch_number, id(self)))
 
 
 class ChristmasTree:
@@ -27,27 +27,27 @@ class ChristmasTree:
         return self.branches.setdefault(number, TreeBranch(number))
 
     def dress_up_the_tree(self):
-        self.hang_lamp('red', 1)
-        self.hang_lamp('blue', 1)
-        self.hang_lamp('yellow', 1)
-        self.hang_lamp('red', 2)
-        self.hang_lamp('blue', 2)
-        self.hang_lamp('yellow', 2)
-        self.hang_lamp('red', 3)
-        self.hang_lamp('blue', 3)
-        self.hang_lamp('yellow', 3)
-        self.hang_lamp('red', 4)
-        self.hang_lamp('blue', 4)
-        self.hang_lamp('yellow', 4)
-        self.hang_lamp('red', 5)
-        self.hang_lamp('blue', 5)
-        self.hang_lamp('yellow', 5)
-        self.hang_lamp('red', 6)
-        self.hang_lamp('blue', 6)
-        self.hang_lamp('yellow', 6)
-        self.hang_lamp('red', 7)
-        self.hang_lamp('blue', 7)
-        self.hang_lamp('yellow', 7)
+        self.hang_lamp('красный', 1)
+        self.hang_lamp('голубой', 1)
+        self.hang_lamp('желтый', 1)
+        self.hang_lamp('красный', 2)
+        self.hang_lamp('голубой', 2)
+        self.hang_lamp('желтый', 2)
+        self.hang_lamp('красный', 3)
+        self.hang_lamp('голубой', 3)
+        self.hang_lamp('желтый', 3)
+        self.hang_lamp('красный', 4)
+        self.hang_lamp('голубой', 4)
+        self.hang_lamp('желтый', 4)
+        self.hang_lamp('красный', 5)
+        self.hang_lamp('голубой', 5)
+        self.hang_lamp('желтый', 5)
+        self.hang_lamp('красный', 6)
+        self.hang_lamp('голубой', 6)
+        self.hang_lamp('желтый', 6)
+        self.hang_lamp('красный', 7)
+        self.hang_lamp('голубой', 7)
+        self.hang_lamp('желтый', 7)
 
     def hang_lamp(self, color, branch_number):
         self.get_branch(branch_number).hang(LampFactory.get_lamp(color))

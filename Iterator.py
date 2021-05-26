@@ -1,4 +1,4 @@
-class IteratorBase(object):
+class IteratorBase:
 
     def first(self):
         pass
@@ -58,10 +58,10 @@ class Iterator(IteratorBase):
         return self._list[index]
 
 
-it = Iterator(['one', 'two', 'three', 'four', 'five'])
+it = Iterator(['один', 'два', 'три', 'четыри', 'пять'])
 
 for i in range(5):
-    print(it.prev()) # ['five', 'four', 'three', 'two', 'one']
+    print(it.prev())
 
 for i in range(5):
     print(it.next())

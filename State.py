@@ -1,18 +1,14 @@
 class LampStateBase:
-    """Состояние лампы"""
     def get_color(self):
         pass
-
 
 class GreenLampState(LampStateBase):
     def get_color(self):
         return 'Green'
 
-
 class RedLampState(LampStateBase):
     def get_color(self):
         return 'Red'
-
 
 class BlueLampState(LampStateBase):
     def get_color(self):

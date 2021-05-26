@@ -7,19 +7,19 @@ class ImageDecoder:
 class PNGImageDecoder(ImageDecoder):
     @staticmethod
     def decode(filename):
-        print('PNG decode')
+        print('Формат изображения: PNG')
 
 
 class JPEGImageDecoder(ImageDecoder):
     @staticmethod
     def decode(filename):
-        print('JPEG decode')
+        print('Формат изображения: JPEG')
 
 
 class GIFImageDecoder(ImageDecoder):
     @staticmethod
     def decode(filename):
-        print('GIF decode')
+        print('Формат изображения: GIF')
 
 
 class Image:
@@ -33,8 +33,10 @@ class Image:
         elif ext == 'gif':
             decoder = GIFImageDecoder
         else:
-            raise RuntimeError('Невозможно декодировать файл %s' % filename)
+            raise RuntimeError('Невозможно опеределить формат файла %s' % filename)
+
         byterange = decoder.decode(filename)
+        
         return cls(byterange, filename)
 
     def __init__(self, byterange, filename):
@@ -42,6 +44,6 @@ class Image:
         self._filename = filename
 
 
-Image.open('picture.png')  # PNG decode
-Image.open('picture.jpg')  # JPEG decode
-Image.open('picture.gif')  # GIF decode
+Image.open('picture.png')
+Image.open('picture.jpg')
+Image.open('picture.gif')

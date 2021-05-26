@@ -22,7 +22,7 @@ prototype = Prototype()
 prototype.register('bird', Bird())
 
 owl = prototype.clone('bird', {'name': 'Owl'})
-print(type(owl), owl.name) # Owl
+print(type(owl), owl.name)
 
 duck = prototype.clone('bird', {'name': 'Duck'})
-print(type(duck), duck.name) # Duck
+print(type(duck), duck.name)

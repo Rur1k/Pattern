@@ -33,6 +33,7 @@ class Proxy(IMath):
 
     def sub(self, x, y):
         return x - y
+
     def mul(self, x, y):
         if not self.math:
             self.math = Math()

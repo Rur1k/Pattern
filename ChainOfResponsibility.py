@@ -1,12 +1,10 @@
 class HttpHandler:
-    """Абстрактный класс обработчика"""
 
     def handle(self, code):
         raise NotImplementedError()
 
 
 class Http404Handler(HttpHandler):
-    """Обработчик для кода 404"""
 
     def handle(self, code):
         if code == 404:
@@ -14,7 +12,6 @@ class Http404Handler(HttpHandler):
 
 
 class Http500Handler(HttpHandler):
-    """Обработчик для кода 500"""
 
     def handle(self, code):
         if code == 500:

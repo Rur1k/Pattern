@@ -14,7 +14,6 @@ class ColorFigure:
     def GetColor(self):
         pass
 
-
 class ColorGeometricFigure(ColorFigure):
     def __init__(self, color, Figure):
         self.__color = color

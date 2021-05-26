@@ -8,26 +8,26 @@ class WindowBase:
 
 class MainWindow(WindowBase):
     def show(self):
-        print('Show MainWindow')
+        print('Показать MainWindow')
 
     def hide(self):
-        print('Hide MainWindow')
+        print('Скрыть MainWindow')
 
 
 class SettingWindow(WindowBase):
     def show(self):
-        print('Show SettingWindow')
+        print('ПОказать SettingWindow')
 
     def hide(self):
-        print('Hide SettingWindow')
+        print('Скрыть SettingWindow')
 
 
 class HelpWindow(WindowBase):
     def show(self):
-        print('Show HelpWindow')
+        print('Показать HelpWindow')
 
     def hide(self):
-        print('Hide HelpWindow')
+        print('Скрыть HelpWindow')
 
 
 class WindowMediator:
@@ -35,7 +35,7 @@ class WindowMediator:
         self.windows = dict.fromkeys(['main', 'setting', 'help'])
 
     def show(self, win):
-        for window in self.windows.itervalues():
+        for window in self.windows.values():
             if not window is win:
                 window.hide()
         win.show()
@@ -59,14 +59,8 @@ med.set_main(main_win)
 med.set_setting(setting_win)
 med.set_help(help_win)
 
-main_win.show()  # Show MainWindow
+main_win.show()
 
 med.show(setting_win)
-# Hide MainWindow
-# Hide HelpWindow
-# Show SettingWindow
 
 med.show(help_win)
-# Hide MainWindow
-# Hide SettingWindow
-# Show HelpWindow

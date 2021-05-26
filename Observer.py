@@ -4,14 +4,15 @@ class Subject:
         self._observers = set()
 
     def attach(self, observer):
-        # подписаться на оповещение
         if not isinstance(observer, ObserverBase):
             raise TypeError()
         self._observers.add(observer)
 
     def detach(self, observer):
-        # отписаться от оповещения
+        #if self._observers.isdisjoint(observer):
         self._observers.remove(observer)
+        #else:
+        #    print('Данный подписчик не найден')
 
     def get_data(self):
         return self._data
@@ -21,7 +22,6 @@ class Subject:
         self.notify(data)
 
     def notify(self, data):
-        # уведомить всех наблюдателей о событии
         for observer in self._observers:
             observer.update(data)
 
@@ -32,7 +32,6 @@ class ObserverBase:
 
 
 class Observer(ObserverBase):
-
     def __init__(self, name):
         self._name = name
 
@@ -41,8 +40,10 @@ class Observer(ObserverBase):
 
 
 subject = Subject()
-subject.attach(Observer('Наблюдатель 1'))
-subject.attach(Observer('Наблюдатель 2'))
-subject.set_data('данные для наблюдателя')
-# Наблюдатель 2: данные для наблюдателя
-# Наблюдатель 1: данные для наблюдателя
+subject.attach(Observer('Подписчик 1'))
+subject.attach(Observer('Подписчик 2'))
+subject.attach(Observer('Подписчик 3'))
+subject.set_data('данные для подписчика')
+
+#subject.detach(Observer('Подписчик 3'))
+subject.set_data('новые данные для подписчиков')

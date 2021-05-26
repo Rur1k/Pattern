@@ -1,5 +1,4 @@
 class Memento:
-    """Хранитель"""
     def __init__(self, state):
         self._state = state
 
@@ -8,7 +7,6 @@ class Memento:
 
 
 class Caretaker:
-    """Опекун"""
     def __init__(self):
         self._memento = None
 
@@ -20,7 +18,6 @@ class Caretaker:
 
 
 class Originator:
-    """Создатель"""
     def __init__(self):
         self._state = None
 
@@ -41,11 +38,11 @@ originator = Originator()
 caretaker = Caretaker()
 
 originator.set_state('on')
-print('Originator state:', originator.get_state())  # Originator state: on
+print('Cостояние:', originator.get_state())
 caretaker.set_memento(originator.save_state())
 
 originator.set_state('off')
-print('Originator change state:', originator.get_state())  # Originator change state: off
+print('Изминенное состояния:', originator.get_state())
 
 originator.restore_state(caretaker.get_memento())
-print('Originator restore state:', originator.get_state())  # Originator restore state: on
+print('Восстановление предыдущего состояния:', originator.get_state())
